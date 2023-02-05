@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-nextjs-starter`
+# `sphere-lite-client`
 
 <!-- @TODO -->
 
