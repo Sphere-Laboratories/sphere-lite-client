@@ -41,7 +41,16 @@ export const Button = ({ units, id }: any) => {
       return (
             <>
                   {txSig ? (
-                        <p>transactionSignature: {txSig}</p>
+                        <p>transactionSignature: &nbsp;
+                              <a href={`https://solscan.io/tx/${txSig}`}
+                                    style={{
+                                          color: "blue",
+                                          textDecoration: "underline",
+                                    }}
+                              >
+                                    {txSig}
+                              </a> 
+                        </p>
                   ) : (
                         <button className="buttonPurchase" onClick={onClick}>Purchase Product</button>
                   )}
