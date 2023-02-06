@@ -16,17 +16,18 @@ export const Button = ({ units, id }: any) => {
                         rpcUrl: 'https://solana-mainnet.g.alchemy.com/v2/UesFjy66kB4g4BEa1-JFNCEYIP_FxXvF',
                         reactWallet,
                     })
-                    await _sphere.prepareFrontend()
                     setSphere(_sphere)
+                    await _sphere.prepareFrontend()
                 } catch(error){
                     console.log(error)
                 }
             }
         })()
-      }, [reactWallet])
+      }, [reactWallet.connected])
 
       const onClick = async () => {
             try {
+                  console.log(sphere)
                   const _txSig = await sphere?.product.purchase({
                         id,
                         units,
